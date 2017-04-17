@@ -3,7 +3,7 @@
 @import "compass/reset";
 
 $susy: (
-  columns: 12,
+  columns: 10,
   gutters: 1/4,
   container: 60em,
   math: fluid,
@@ -13,28 +13,59 @@ $susy: (
   debug: (
     image: show,
     color: rgba(#66f, .5),
-    output: background,
+    output: overlay,
     toggle: top right,
     )
   );
 #main {
-  @include container();
-  @include margin-trailer(2);
-  @include margin-leader(2);
-  @media screen and (max-width: 768px) {
+
+  @include container(960px);
+   
+  @media screen and (max-width: 960px) {
     margin: 0;
   }
 }
 
+
 #masterhead {
-  @include span(12);
+  @include span(10);
   background: rgba(green, .7);
 }
 
+
+@mixin block-name($name) {
+  position: relative;
+
+  &:before {
+    content: '#{$name}';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: Monaco, monospace;
+    text-shadow: 0 0 10px white;
+  }
+}
+@mixin block($name) {
+  @include block-name($name);
+
+  background-color: lighten(dimgray, 10%);
+  border-radius: 18px;
+}
+
 #content {
-  @include span(12);
+  @include span(10);
   background: rgba(hotpink, .7);
   @media screen and (max-width: 768px) {
-    @include span(12);
+    @include span(10);
   }
+  @include block('content');
+
+  height: 100%;
+  box-shadow: 0 0 15px dimgray;
+  background-color: dimgray;
+  opacity: 0.7;
+   
 } 

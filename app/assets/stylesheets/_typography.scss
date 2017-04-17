@@ -6,9 +6,10 @@ $grid-background-baseline-color: white;
 
 @include establish-baseline;
 h2 {
-  @include adjust-font-size-to(22px, 2);
+  @include adjust-font-size-to(22px, 1);
   @include margin-leader(1);
   @include margin-trailer(1);
+
 }
 
 p {
