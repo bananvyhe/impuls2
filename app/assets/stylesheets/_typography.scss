@@ -1,0 +1,21 @@
+@import "compass/typography/vertical_rhythm";
+$base-font-size: 16px;
+$base-line-height: 24px;
+$rhythm-unit: "rem";
+$grid-background-baseline-color: white;
+
+@include establish-baseline;
+h2 {
+  @include adjust-font-size-to(22px, 2);
+  @include margin-leader(1);
+  @include margin-trailer(1);
+}
+
+p {
+  @include margin-leader(1);
+  @include margin-trailer(1);
+}
+
+.article p {
+  @include adjust-font-size-to(16px, 1);
+}

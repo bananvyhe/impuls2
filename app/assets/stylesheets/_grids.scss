@@ -1,0 +1,40 @@
+@import "compass";
+@import "susy";
+@import "compass/reset";
+
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+  container: 60em,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+
+  debug: (
+    image: show,
+    color: rgba(#66f, .5),
+    output: background,
+    toggle: top right,
+    )
+  );
+#main {
+  @include container();
+  @include margin-trailer(2);
+  @include margin-leader(2);
+  @media screen and (max-width: 768px) {
+    margin: 0;
+  }
+}
+
+#masterhead {
+  @include span(12);
+  background: rgba(green, .7);
+}
+
+#content {
+  @include span(12);
+  background: rgba(hotpink, .7);
+  @media screen and (max-width: 768px) {
+    @include span(12);
+  }
+} 
