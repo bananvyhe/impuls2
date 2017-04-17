@@ -6,6 +6,9 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- for development use -->
+    <script src="http://localhost:35729/livereload.js"></script>
+    <!-- end -->
   </head>
 
   <body>
@@ -13,3 +16,4 @@
     <%= yield %>
   </body>
 </html>
+ 
