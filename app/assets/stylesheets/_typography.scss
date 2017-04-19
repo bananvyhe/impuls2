@@ -1,22 +1,30 @@
+@import "compass/typography";
 @import "compass/typography/vertical_rhythm";
-$base-font-size: 16px;
-$base-line-height: 24px;
-$rhythm-unit: "rem";
+@import "compass/css3";
+
+$base-font-size: 18px !global;
+$base-line-height: 28px !global;
+$rhythm-unit: "rem" !global;
 $grid-background-baseline-color: white;
-
+$rem-with-px-fallback: true !global;
 @include establish-baseline;
-h2 {
-  @include adjust-font-size-to(22px, 1);
-  @include margin-leader(1);
-  @include margin-trailer(1);
 
+p.img.iframe {
+  @include margin-trailer;
+}
+
+h1, h2 {
+  color: #eee;
+  @include adjust-font-size-to(24px, 1);
+  @include margin-leader(1);
+ 
 }
 
 p {
-  @include margin-leader(1);
+ 
   @include margin-trailer(1);
 }
 
 .article p {
-  @include adjust-font-size-to(16px, 1);
+  @include adjust-font-size-to(24px, 1);
 }

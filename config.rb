@@ -5,3 +5,4 @@ sass_dir = 'app/assets/stylesheets'
 javascripts_dir = 'app/assets/javascripts'
 output_style = :expanded
 relative_assets = true
+line_comments = false
