@@ -15,3 +15,14 @@
 //= require turbolinks
 //= require_tree .
  
+ //js keep Vrhythm on img
+ $(window).load(function() {
+  if ($(window).width() >= 769) {
+    $("img").keepTheRhythm({ baseLine: 33 });
+    $("iframe").keepTheRhythm({ baseLine: 33 });
+  } else {
+    $("img").keepTheRhythm({ baseLine: 24 });
+    $("iframe").keepTheRhythm({ baseLine: 24 });
+  }
+ });
+ //end

@@ -2,18 +2,23 @@
 @import "compass/typography/vertical_rhythm";
 @import "compass/css3";
 
-$base-font-size: 18px !global;
-$base-line-height: 28px !global;
+$base-font-size: 22px !global;
+$base-line-height: 33px !global;
 $rhythm-unit: "rem" !global;
 $grid-background-baseline-color: white;
 $rem-with-px-fallback: true !global;
 @include establish-baseline;
-
-p.img.iframe {
+ 
+img, iframe {
+  margin: auto;
+  display: block;
+  max-width: 100%;
   @include margin-trailer;
 }
 
+
 h1, h2 {
+  font-weight: 700;
   color: #eee;
   @include adjust-font-size-to(24px, 1);
   @include margin-leader(1);
