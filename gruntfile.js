@@ -14,6 +14,7 @@ module.exports = function(grunt) {
       compass: {
         dev: {
           options: {
+            require: 'susy',
             config: 'config.rb'
           } //options
         } //dev

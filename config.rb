@@ -1,4 +1,4 @@
-require 'susy'
+require 'compass/import-once/activate'
  
 css_dir = 'app/assets/stylesheets'
 sass_dir = 'app/assets/stylesheets'
