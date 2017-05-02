@@ -183,7 +183,7 @@ p {
   text-shadow: 0 0 10px white;
 }
 
-.clickme {
+#clickme {
   font-size: 42px;
   font-size: 1.90909rem;
   line-height: 66px;
@@ -196,10 +196,16 @@ p {
   box-shadow: black 2px 2px 10px;
   text-align: center;
   background-color: #ccc;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   position: fixed;
   top: 50px;
   right: 50px;
   opacity: 0.3;
+}
+#clickme:hover {
+  -moz-transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  -webkit-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
 }

@@ -1,7 +1,7 @@
 //script for debug  toggle style bgimageLineGrid on/off mouse action
 $(function() {
   $("<div/>", {
-      "class": "clickme",
+      "id": "clickme",
       text: "",
       function(){
           $('#main').removeClass('main');
