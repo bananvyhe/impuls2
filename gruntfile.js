@@ -4,13 +4,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-compass');
     
     grunt.initConfig({
-      // uglify: {
-      //   my_target: {
-      //     files: {
-      //       'app/assets/javascripts/script.js': ['app/assets/javascripts/*.js']
-      //     } //files
-      //   } //my_target
-      // }, //uglify
+      uglify: {
+        my_target: {
+          files: {
+           // 'app/assets/javascripts/script.js': ['app/assets/javascripts/js/*.js']
+          } //files
+        } //my_target
+      }, //uglify
       compass: {
         dev: {
           options: {
@@ -22,7 +22,7 @@ module.exports = function(grunt) {
       watch: {
         options: { livereload: true },
         scripts: {
-          files: ['app/assets/javascripts/*.js'],
+          files: ['app/assets/javascripts/js/*.js'],
           tasks: ['uglify']
         }, //script
         sass: {

@@ -18,11 +18,22 @@
 @import "compass/reset";
 @import "susy";
 @import "typography";
-
 @import "base";
-
-
 @import "grids";
+
+//div-js toggle for debug
+.clickme {
+  @include adjust-font-size-to(42px);
+  text-align: center;
+  background-color: #ccc;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top:100px;
+  right:100px;
+  opacity: 0.5;
+}
+//end
 
 
 
