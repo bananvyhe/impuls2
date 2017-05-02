@@ -2,7 +2,7 @@
 $(function() {
   $("<div/>", {
       "class": "clickme",
-      text: "+",
+      text: "",
       function(){
           $('#main').removeClass('main');
       },
