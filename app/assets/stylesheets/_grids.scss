@@ -35,9 +35,10 @@ body {
     @include debug-vertical-alignment;
 }
 
-
+$line1: 24px;
+$line2: 33px;
 $base-font-size: 16px !global;
-$base-line-height: 24px !global;
+$base-line-height: $line1 !global;
 $rhythm-unit: "rem" !global;
 $grid-background-baseline-color: white;
 $rem-with-px-fallback: true !global;
@@ -46,7 +47,7 @@ $rem-with-px-fallback: true !global;
 
 @include susy-media(50em) {
   $base-font-size: 22px !global;
-  $base-line-height: 33px !global;
+  $base-line-height: $line2 !global;
   $rhythm-unit: "rem" !global;
   $grid-background-baseline-color: white;
   $rem-with-px-fallback: true !global;
@@ -87,8 +88,29 @@ p {
 
 
 #masterhead {
-  @include span(10);
+ 
+  @include span(10);  
   background: rgba(green, .7);
+
+  height: $line1*7;
+  @include susy-media(50em) {
+    height: $line2*7;
+  }
+  
+
+}
+
+#logo {
+  @include span(4);
+  background: rgba(red, .7);
+  background-image: url(logo21.png);
+  background-repeat: no-repeat;
+  @include margin-trailer(1);
+}
+
+#contactsviget {
+  @include span(6);
+  background: rgba(blue, .7);
 }
 
 

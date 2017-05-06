@@ -143,6 +143,38 @@ p {
   padding-left: 1%;
   padding-right: 1%;
   background: rgba(0, 128, 0, 0.7);
+  height: 168px;
+}
+@media (min-width: 50em) {
+  #masterhead {
+    height: 231px;
+  }
+}
+
+#logo {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 40%;
+  float: left;
+  padding-left: 1%;
+  padding-right: 1%;
+  background: rgba(255, 0, 0, 0.7);
+  background-image: url(logo21.png);
+  background-repeat: no-repeat;
+  margin-bottom: 33px;
+  margin-bottom: 1.5rem;
+}
+
+#contactsviget {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 60%;
+  float: left;
+  padding-left: 1%;
+  padding-right: 1%;
+  background: rgba(0, 0, 255, 0.7);
 }
 
 #content {
