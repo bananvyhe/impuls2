@@ -88,9 +88,10 @@ p {
 
 
 #masterhead {
+  display: flex;
  
   @include span(10);  
-  background: rgba(green, .7);
+   
 
   height: $line1*7;
   @include susy-media(50em) {
@@ -102,15 +103,23 @@ p {
 
 #logo {
   @include span(4);
-  background: rgba(red, .7);
+   
   background-image: url(logo21.png);
   background-repeat: no-repeat;
   @include margin-trailer(1);
 }
 
 #contactsviget {
-  @include span(6);
+  @include span(6 last);
   background: rgba(blue, .7);
+}
+
+#grass {
+  background-image: url(grass.jpg); 
+  @include span(10);
+  background-color: #ccc; 
+  height: $line1*2;
+
 }
 
 
