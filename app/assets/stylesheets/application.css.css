@@ -76,6 +76,9 @@ html {
 body {
   height: 100%;
   font-family: "Verdana", Georgia, serif;
+  background-image: url("SW-028.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
 }
 
 #main {
@@ -143,11 +146,11 @@ p {
   float: left;
   padding-left: 1%;
   padding-right: 1%;
-  height: 168px;
+  height: 120px;
 }
 @media (min-width: 50em) {
   #masterhead {
-    height: 231px;
+    height: 165px;
   }
 }
 
@@ -173,11 +176,28 @@ p {
   float: right;
   padding-left: 1%;
   padding-right: 1%;
-  background: rgba(0, 0, 255, 0.7);
 }
 
 #grass {
-  background-image: url(grass.jpg);
+  background-image: url(grass-01.svg);
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 1%;
+  padding-right: 1%;
+  background-position: center bottom;
+  background-size: contain;
+  height: 36px;
+}
+@media (min-width: 50em) {
+  #grass {
+    height: 49.5px;
+  }
+}
+
+#mainmenu {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -186,7 +206,12 @@ p {
   padding-left: 1%;
   padding-right: 1%;
   background-color: #ccc;
-  height: 48px;
+  height: 36px;
+}
+@media (min-width: 50em) {
+  #mainmenu {
+    height: 49.5px;
+  }
 }
 
 #content {

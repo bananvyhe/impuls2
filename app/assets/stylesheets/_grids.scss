@@ -25,6 +25,10 @@ html {
 body {
   height: 100%;
   font-family: "Verdana", Georgia, serif;
+  background-image: url("SW-028.jpg");
+  background-repeat: no-repeat;
+  background-position: center top; 
+
 }
 
 #main {
@@ -32,11 +36,12 @@ body {
 }
 
 .main {
-    @include debug-vertical-alignment;
+  @include debug-vertical-alignment;
 }
 
 $line1: 24px;
 $line2: 33px;
+
 $base-font-size: 16px !global;
 $base-line-height: $line1 !global;
 $rhythm-unit: "rem" !global;
@@ -71,39 +76,30 @@ img, iframe {
 h1, h2 {
   font-weight: 700;
   color: #eee;
-   
   @include margin-leader(1);
- 
 }
 
 p {
- 
   @include margin-trailer(1);
 }
 
 .article p {
-   
 }
 
 
 
 #masterhead {
   display: flex;
- 
   @include span(10);  
-   
+  height: $line1*5;
 
-  height: $line1*7;
   @include susy-media(50em) {
-    height: $line2*7;
+  height: $line2*5;
   }
-  
-
 }
 
 #logo {
   @include span(4);
-   
   background-image: url(logo21.png);
   background-repeat: no-repeat;
   @include margin-trailer(1);
@@ -111,32 +107,45 @@ p {
 
 #contactsviget {
   @include span(6 last);
-  background: rgba(blue, .7);
+   
 }
 
 #grass {
-  background-image: url(grass.jpg); 
+  background-image: url(grass-01.svg);
+  @include span(10);
+   
+  background-position: center bottom;
+  background-size: contain;
+  height: $line1*1.5;
+  @include susy-media(50em) {
+  height: $line2*1.5;
+  }
+
+}
+
+#mainmenu {
   @include span(10);
   background-color: #ccc; 
-  height: $line1*2;
-
+  height: $line1*1.5;
+  @include susy-media(50em) {
+  height: $line2*1.5;
+  }
 }
 
 
 @mixin block-name($name) {
   position: relative;
-
   &:before {
     content: '#{$name}';
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-     
     text-transform: uppercase;
     text-shadow: 0 0 10px white;
   }
 }
+
 @mixin block($name) {
   @include block-name($name);
   background-color: lighten(dimgray, 10%);
