@@ -76,7 +76,6 @@ html {
 body {
   height: 100%;
   font-family: "Verdana", Georgia, serif;
-  background-image: url("SW-028.jpg");
   background-repeat: no-repeat;
   background-position: center top;
 }
@@ -101,6 +100,16 @@ html {
   line-height: 1.5em;
 }
 
+@media (min-width: 769px) {
+  .wrapper {
+    padding: 27px;
+  }
+
+  html {
+    font-size: 112.5%;
+    line-height: 1.5em;
+  }
+}
 .debug {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjEuMCIgeDI9IjAuNSIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSI1JSIgc3RvcC1jb2xvcj0iI2YwYTJjNCIvPjxzdG9wIG9mZnNldD0iNSUiIHN0b3AtY29sb3I9IiNmMGEyYzQiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
   background-size: 100%;
@@ -115,30 +124,6 @@ html {
   background-position: left top;
 }
 
-@media (min-width: 769px) {
-  .wrapper {
-    padding: 27px;
-  }
-
-  html {
-    font-size: 112.5%;
-    line-height: 1.5em;
-  }
-
-  .debug {
-    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjEuMCIgeDI9IjAuNSIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSI1JSIgc3RvcC1jb2xvcj0iI2YwYTJjNCIvPjxzdG9wIG9mZnNldD0iNSUiIHN0b3AtY29sb3I9IiNmMGEyYzQiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
-    background-size: 100%;
-    background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(5%, #f0a2c4), color-stop(5%, rgba(240, 162, 196, 0)));
-    background-image: -moz-linear-gradient(bottom, #f0a2c4 5%, rgba(240, 162, 196, 0) 5%);
-    background-image: -webkit-linear-gradient(bottom, #f0a2c4 5%, rgba(240, 162, 196, 0) 5%);
-    background-image: linear-gradient(to top, #f0a2c4 5%, rgba(240, 162, 196, 0) 5%);
-    -moz-background-size: 100% 1.5rem;
-    -o-background-size: 100% 1.5rem;
-    -webkit-background-size: 100% 1.5rem;
-    background-size: 100% 1.5rem;
-    background-position: left top;
-  }
-}
 img, iframe {
   margin: auto;
   display: block;
@@ -161,6 +146,8 @@ p {
 
 #masterhead {
   display: flex;
+  background-image: url("SW-028.jpg");
+  background-size: cover;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -172,7 +159,7 @@ p {
 }
 @media (min-width: 50em) {
   #masterhead {
-    height: 90px;
+    height: 126px;
   }
 }
 

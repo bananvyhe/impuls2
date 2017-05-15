@@ -24,10 +24,8 @@
     $("img").keepTheRhythm({ baseLine: 21 });
     $("iframe").keepTheRhythm({ baseLine: 21 });
   }
-
-
- });
- //end
+});
+//end
 
 
   

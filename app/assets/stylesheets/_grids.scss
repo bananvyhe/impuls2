@@ -25,17 +25,14 @@ html {
 body {
   height: 100%;
   font-family: "Verdana", Georgia, serif;
-  background-image: url("SW-028.jpg");
+  
   background-repeat: no-repeat;
   background-position: center top; 
-
 }
 
 #main {
   @include container();
 }
-
-
 
 $line1: 14px;
 $line2: 18px;
@@ -49,21 +46,17 @@ $line2: 18px;
   .wrapper { padding: $base-line-height; }
 }
 
-
-
 @include uwd-rhytm-config($line1);
 @include establish-baseline;
-.debug {
-  @include debug-vertical-alignment;
-}
+
 @media (min-width: 769px) {
   @include uwd-rhytm-config($line2);
   @include establish-baseline;
-  .debug {
-  @include debug-vertical-alignment;
-  }
 }
 
+.debug {
+  @include debug-vertical-alignment;
+}
 
 img, iframe {
   margin: auto;
@@ -71,7 +64,6 @@ img, iframe {
   max-width: 100%;
   @include margin-trailer;
 }
-
 
 h1, h2 {
   font-weight: 700;
@@ -88,11 +80,13 @@ p {
  
 #masterhead {
   display: flex;
+  background-image: url("SW-028.jpg");
+  background-size: cover;
   @include span(10);  
   height: $line1*5;
 
   @include susy-media(50em) {
-  height: $line2*5;
+  height: $line2*7;
   }
 }
 
@@ -111,7 +105,6 @@ p {
 #grass {
   background-image: url(grass-01.svg);
   @include span(10);
-   
   background-position: center bottom;
   background-size: contain;
   height: $line1*1.5;
