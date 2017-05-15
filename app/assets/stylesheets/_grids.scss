@@ -35,29 +35,54 @@ body {
   @include container();
 }
 
-.main {
+
+
+$line1: 14px;
+$line2: 18px;
+
+@mixin uwd-rhytm-config($size) {
+  $base-font-size: $size !global;
+  $base-line-height: $size * 1.5 !global;
+  $rhythm-unit: "rem" !global;
+  $rem-with-px-fallback: true !global;
+  $grid-background-baseline-color: lighten(#D72272, 30%) !global;
+  .wrapper { padding: $base-line-height; }
+}
+
+
+
+@include uwd-rhytm-config($line1);
+@include establish-baseline;
+.debug {
   @include debug-vertical-alignment;
 }
-
-$line1: 24px;
-$line2: 33px;
-
-$base-font-size: 16px !global;
-$base-line-height: $line1 !global;
-$rhythm-unit: "rem" !global;
-$grid-background-baseline-color: white;
-$rem-with-px-fallback: true !global;
-@include establish-baseline;
-
-
-@include susy-media(50em) {
-  $base-font-size: 22px !global;
-  $base-line-height: $line2 !global;
-  $rhythm-unit: "rem" !global;
-  $grid-background-baseline-color: white;
-  $rem-with-px-fallback: true !global;
+@media (min-width: 769px) {
+  @include uwd-rhytm-config($line2);
   @include establish-baseline;
+  .debug {
+  @include debug-vertical-alignment;
+  }
 }
+
+// $line1: 24px;
+// $line2: 33px;
+
+// $base-font-size: 16px !global;
+// $base-line-height: $line1 !global;
+// $rhythm-unit: "rem" !global;
+// $grid-background-baseline-color: white;
+// $rem-with-px-fallback: true !global;
+// @include establish-baseline;
+
+
+// @include susy-media(50em) {
+//   $base-font-size: 22px !global;
+//   $base-line-height: $line2 !global;
+//   $rhythm-unit: "rem" !global;
+//   $grid-background-baseline-color: white;
+//   $rem-with-px-fallback: true !global;
+//   @include establish-baseline;
+// }
 
 
  
@@ -154,10 +179,7 @@ p {
 
 #content {
   @include span(10);
-  background: rgba(hotpink, .7);
-  @media screen and (max-width: 768px) {
-    @include span(10);
-  }
+   
 
   @include block('content');
   height: 100%;

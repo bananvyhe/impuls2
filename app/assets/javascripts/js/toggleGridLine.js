@@ -4,13 +4,13 @@ $(function() {
       "id": "clickme",
       text: "",
       function(){
-          $('#main').removeClass('main');
+          $('#content').removeClass('debug');
       },
       mouseenter: function(){
-          $('#main').addClass('main');
+          $('#content').addClass('debug');
       },
       mouseleave: function(){
-          $('#main').removeClass('main');
+          $('#content').removeClass('debug');
       }
   }).appendTo("body");
 });
