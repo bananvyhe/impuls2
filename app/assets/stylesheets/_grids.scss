@@ -1,10 +1,5 @@
-@import "compass";
-@import "compass/reset";
-@import "compass/css3";
-@import "compass/typography";
-@import "compass/typography/vertical_rhythm";
-@import "susy";
-@import "compass/layout/grid-background";
+
+@import "base";
 
 
 $susy: (
@@ -15,8 +10,6 @@ $susy: (
   output: float,
   gutter-position: inside,
 );
-
-
 
 html {
   height: 100%;
@@ -34,67 +27,42 @@ body {
   @include container();
 }
 
-$line1: 14px;
-$line2: 18px;
-
-@mixin uwd-rhytm-config($size) {
-  $base-font-size: $size !global;
-  $base-line-height: $size * 1.5 !global;
-  $rhythm-unit: "rem" !global;
-  $rem-with-px-fallback: true !global;
-  $grid-background-baseline-color: lighten(#D72272, 30%) !global;
-  .wrapper { padding: $base-line-height; }
-}
-
 @include uwd-rhytm-config($line1);
 @include establish-baseline;
 
-@media (min-width: 769px) {
+@include susy-media (769px) {
   @include uwd-rhytm-config($line2);
   @include establish-baseline;
 }
 
-.debug {
-  @include debug-vertical-alignment;
+@include susy-media (1500px) {
+  @include uwd-rhytm-config($line3);
+  @include establish-baseline;
+   
 }
 
-img, iframe {
-  margin: auto;
-  display: block;
-  max-width: 100%;
-  @include margin-trailer;
-}
 
-h1, h2 {
-  font-weight: 700;
-  color: #eee;
-  @include margin-leader(1);
-}
-
-p {
-  @include margin-trailer(1);
-}
-
-.article p {
-}
- 
 #masterhead {
   display: flex;
   background-image: url("SW-028.jpg");
   background-size: cover;
   @include span(10);  
-  height: $line1*5;
+  height: $line1*6;
 
-  @include susy-media(50em) {
-  height: $line2*7;
+  @include susy-media(769px) {
+  height: $line2*6;
+  }
+   @include susy-media(1500px) {
+  height: $line3*6;
   }
 }
 
 #logo {
   @include span(4);
   background-image: url(logo21.png);
+  background-size: cover;
   background-repeat: no-repeat;
-  @include margin-trailer(1);
+  
 }
 
 #contactsviget {
@@ -102,7 +70,20 @@ p {
    
 }
 
+@mixin block($name) {
+  
+  //background-color: lighten(dimgray, 10%);
+  border-radius: 0px 0px 6px 6px;
+  @media (min-width: 769px) {
+    border-radius: 0px 0px 10px 10px;
+  }
+
+}
+
+
+
 #grass {
+  @include block('grass');
   background-image: url(grass-01.svg);
   @include span(10);
   background-position: center bottom;
@@ -116,7 +97,7 @@ p {
 
 #mainmenu {
   @include span(10);
-  background-color: #ccc; 
+   
   height: $line1*1.5;
   @include susy-media(50em) {
   height: $line2*1.5;
@@ -124,24 +105,9 @@ p {
 }
 
 
-@mixin block-name($name) {
-  position: relative;
-  &:before {
-    content: '#{$name}';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-transform: uppercase;
-    text-shadow: 0 0 10px white;
-  }
-}
+ 
 
-@mixin block($name) {
-  @include block-name($name);
-  background-color: lighten(dimgray, 10%);
-  border-radius: 18px;
-}
+
 
 #content {
   @include span(10);
