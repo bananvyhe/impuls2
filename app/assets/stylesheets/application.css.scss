@@ -14,14 +14,10 @@
  *= require_self
  */
 
-@import "compass";
-@import "compass/reset";
-@import "compass/css3";
-@import "susy";
-@import "typography";
+@import "variables";
 @import "base";
 @import "grids";
-@import "compass/css3/transform";
+
 
 $default-box-shadow-color: #999999;
 //div-js toggle for debug

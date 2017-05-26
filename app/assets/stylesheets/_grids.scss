@@ -1,16 +1,5 @@
-
-@import "base";
-
-
-$susy: (
-  columns: 10,
-  gutters: 1/4,
-  container: 60em,
-  math: fluid,
-  output: float,
-  gutter-position: inside,
-);
-
+@import "variables";
+ 
 html {
   height: 100%;
 }
@@ -18,7 +7,6 @@ html {
 body {
   height: 100%;
   font-family: "Verdana", Georgia, serif;
-  
   background-repeat: no-repeat;
   background-position: center top; 
 }
@@ -38,22 +26,45 @@ body {
 @include susy-media (1500px) {
   @include uwd-rhytm-config($line3);
   @include establish-baseline;
-   
 }
 
-
+ 
 #masterhead {
-  display: flex;
+  position: relative;  
   background-image: url("SW-028.jpg");
-  background-size: cover;
-  @include span(10);  
-  height: $line1*6;
+  background-repeat: no-repeat; 
+  @include span(10 full inside no-gutters);  
+  height: $line3*6;
 
-  @include susy-media(769px) {
+  @include susy-breakpoint(769) {
   height: $line2*6;
   }
-   @include susy-media(1500px) {
-  height: $line3*6;
+   @include susy-media(1500) {
+  height: $line1*6;
+  }
+}
+
+#grass {
+  background-image: url(grass.png);
+  background-repeat: repeat-x;
+  background-position: 0px -2px;
+  border-bottom-color: orange;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  @include span(10);
+  position: absolute;
+  bottom:0;
+  background-size: contain;
+  height: $line1*3;
+
+  @include susy-media($medium) {
+    background-size: contain;
+    height: $line2*2;
+  }
+
+  @include susy-media($large) {
+    background-size: contain;
+    height: $line3*2;
   }
 }
 
@@ -62,38 +73,25 @@ body {
   background-image: url(logo21.png);
   background-size: cover;
   background-repeat: no-repeat;
-  
 }
 
 #contactsviget {
   @include span(6 last);
-   
 }
 
 @mixin block($name) {
   
   //background-color: lighten(dimgray, 10%);
-  border-radius: 0px 0px 6px 6px;
+ // border-radius: 0px 0px 6px 6px;
   @media (min-width: 769px) {
-    border-radius: 0px 0px 10px 10px;
+    //border-radius: 0px 0px 10px 10px;
   }
 
 }
 
 
 
-#grass {
-  @include block('grass');
-  background-image: url(grass-01.svg);
-  @include span(10);
-  background-position: center bottom;
-  background-size: contain;
-  height: $line1*1.5;
-  @include susy-media(50em) {
-  height: $line2*1.5;
-  }
 
-}
 
 #mainmenu {
   @include span(10);

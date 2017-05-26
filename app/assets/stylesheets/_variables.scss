@@ -1,2 +1,33 @@
+@import "compass";
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/typography";
+@import "compass/typography/vertical_rhythm";
+@import "susy";
+@import "compass/layout/grid-background"; 
 
- 
+$susy: (
+  columns: 10,
+  gutters: 1/4,
+  container: 60em,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);
+
+$line1: 14px;
+$line2: 18px;
+$line3: 24px;
+
+$small                : 30em;
+$medium               : 47em;
+$large                : 75em;
+
+$grid-background-baseline-color: lighten(#D72272, 30%) !global;
+
+@mixin uwd-rhytm-config($size) {
+  $base-font-size: $size !global;
+  $base-line-height: $size * 1.5 !global;
+  $rhythm-unit: "rem" !global;
+  $rem-with-px-fallback: true !global;
+}
