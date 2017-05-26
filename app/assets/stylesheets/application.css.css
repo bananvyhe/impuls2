@@ -194,26 +194,50 @@ html {
 }
 
 #logo {
+  background-color: #dad;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  width: 40%;
+  width: 60%;
   float: left;
   padding-left: 1%;
   padding-right: 1%;
+  height: 144px;
   background-image: url(logo21.png);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
+}
+@media (min-width: 30em) {
+  #logo {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 40%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%;
+  }
 }
 
 #contactsviget {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  width: 60%;
+  width: 40%;
   float: right;
   padding-left: 1%;
   padding-right: 1%;
+}
+@media (min-width: 30em) {
+  #contactsviget {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 60%;
+    float: right;
+    padding-left: 1%;
+    padding-right: 1%;
+  }
 }
 
 #mainmenu {

@@ -68,15 +68,22 @@ body {
   }
 }
 
-#logo {
-  @include span(4);
+#logo {background-color: #dad;
+  @include span(6);
+  @include susy-media($small) {
+    @include span(4);
+  }
+  height: $line3*6;
   background-image: url(logo21.png);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
 #contactsviget {
-  @include span(6 last);
+  @include span(4 last);
+   @include susy-media($small) {
+    @include span(6 last);
+  }
 }
 
 @mixin block($name) {
