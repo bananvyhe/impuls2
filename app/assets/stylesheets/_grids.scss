@@ -35,7 +35,6 @@ body {
   background-repeat: no-repeat; 
   @include span(10 full inside no-gutters);  
   height: $line3*6;
-
   @include susy-breakpoint(769) {
   height: $line2*6;
   }
@@ -55,7 +54,7 @@ body {
   position: absolute;
   bottom:0;
   background-size: contain;
-  height: $line1*3;
+  height: $line1*2;
 
   @include susy-media($medium) {
     background-size: contain;
@@ -68,10 +67,10 @@ body {
   }
 }
 
-#logo {background-color: #dad;
+#logo {
   @include span(6);
   @include susy-media($small) {
-    @include span(4);
+  @include span(4);
   }
   height: $line3*6;
   background-image: url(logo21.png);
@@ -81,43 +80,30 @@ body {
 
 #contactsviget {
   @include span(4 last);
-   @include susy-media($small) {
-    @include span(6 last);
+  @include susy-media($small) {
+  @include span(6 last);
   }
 }
 
 @mixin block($name) {
-  
   //background-color: lighten(dimgray, 10%);
- // border-radius: 0px 0px 6px 6px;
+  // border-radius: 0px 0px 6px 6px;
   @media (min-width: 769px) {
-    //border-radius: 0px 0px 10px 10px;
+  //border-radius: 0px 0px 10px 10px;
   }
 
 }
 
-
-
-
-
 #mainmenu {
   @include span(10);
-   
   height: $line1*1.5;
   @include susy-media(50em) {
   height: $line2*1.5;
   }
 }
 
-
- 
-
-
-
 #content {
   @include span(10);
-   
-
   @include block('content');
   height: 100%;
   box-shadow: 0 0 15px dimgray;

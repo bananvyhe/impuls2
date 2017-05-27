@@ -178,7 +178,7 @@ html {
   position: absolute;
   bottom: 0;
   background-size: contain;
-  height: 42px;
+  height: 28px;
 }
 @media (min-width: 47em) {
   #grass {
@@ -194,7 +194,6 @@ html {
 }
 
 #logo {
-  background-color: #dad;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
