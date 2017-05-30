@@ -2,44 +2,116 @@
  
 html {
   height: 100%;
+  overflow-x:hidden;
 }
 
 body {
   height: 100%;
-  font-family: "Verdana", Georgia, serif;
-  background-repeat: no-repeat;
-  background-position: center top; 
+  font-family: $font-main;
+  font-weight: 300;
+  
 }
 
 #main {
   @include container();
+  @include susy-media ($large) {
+   @include container(75em);
+  }
 }
 
 @include uwd-rhytm-config($line1);
 @include establish-baseline;
 
-@include susy-media (769px) {
+@include susy-media ($medium) {
   @include uwd-rhytm-config($line2);
   @include establish-baseline;
 }
 
-@include susy-media (1500px) {
+@include susy-media ($large) {
   @include uwd-rhytm-config($line3);
+  $base-font-size: $line2 !global;
+  $base-line-height: $line2 * 1.5 !global;
   @include establish-baseline;
 }
 
- 
+
+
+.debug {
+  @include debug-vertical-alignment;
+}
+
+img, iframe {
+  margin: auto;
+  display: block;
+  max-width: 100%;
+  @include margin-trailer;
+}
+
+h1, h2, h3, h4, h5, h6, h7, h8 {
+  font-weight: 700;
+  
+  @include margin-leader(1);
+}
+
+h1 {
+  @include adjust-font-size-to (3.157rem);
+}
+h2 {
+  @include adjust-font-size-to (2.369rem);
+}
+h3 {
+  @include adjust-font-size-to (1.777rem);
+}
+h4 {
+  @include adjust-font-size-to (1.333rem);
+}
+h5 {
+  @include adjust-font-size-to (1rem);
+}
+h6 {
+  @include adjust-font-size-to (0.75rem);
+}
+
+
+
+p {
+  @include margin-trailer(1);
+}
+
+.article p {
+}
+
+
+
+
+
+
+#bgimage {
+
+  background-color: #ada;
+  background-repeat: no-repeat;
+  background-position: center top; 
+  background-image: url("sw028.jpg");
+  display: flex; 
+  background-size: cover;
+  @include bleed-x(15em 15em);
+}
+
 #masterhead {
+
+
+  display: flex;
+  align-items: center;
   position: relative;  
-  background-image: url("SW-028.jpg");
-  background-repeat: no-repeat; 
+  background-position: center top;
+  
   @include span(10 full inside no-gutters);  
-  height: $line3*6;
-  @include susy-breakpoint(769) {
-  height: $line2*6;
+  height: $line1*9;
+  @include susy-media($medium) {
+  height: $line2*9;
   }
-   @include susy-media(1500) {
-  height: $line1*6;
+   @include susy-media($large) {
+  height: $line3*8;
   }
 }
 
@@ -63,25 +135,43 @@ body {
 
   @include susy-media($large) {
     background-size: contain;
-    height: $line3*2;
+    height: $line3*1.5;
   }
 }
 
 #logo {
   @include span(6);
   @include susy-media($small) {
-  @include span(4);
+    @include span(4);
   }
-  height: $line3*6;
+  @include susy-media($medium) {
+    @include span(5);
+  }
+  height: $line3*5;
   background-image: url(logo21.png);
   background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
-#contactsviget {
-  @include span(4 last);
-  @include susy-media($small) {
-  @include span(6 last);
+#contactsviget { 
+  display: flex;
+  @include adjust-font-size-to (0.8em, 2/3);
+ 
+    div {
+       padding: 20px;
+    }
+    .contacts {
+      border-left: 2px ;
+      text-align: left; 
+    }
+  text-align: right;
+    @include span(4 last);
+    @include susy-media($small) {
+    @include span(6 last);
+  }
+  @include susy-media($medium) {
+  @include span(5 last);
   }
 }
 
@@ -94,14 +184,6 @@ body {
 
 }
 
-#mainmenu {
-  @include span(10);
-  height: $line1*1.5;
-  @include susy-media(50em) {
-  height: $line2*1.5;
-  }
-}
-
 #content {
   @include span(10);
   @include block('content');
@@ -110,3 +192,43 @@ body {
   background-color: dimgray;
   opacity: 0.7;
 } 
+
+.layout {
+
+}
+
+
+
+//Navigation ------------------------------------
+.navigation {
+   @include span(10);
+  background: lighten($PRUSSIANBLUE, 75);
+  ul.nav {
+    @include susy-media($small) {
+      @include horizontal-list;
+    }
+    li {
+      i {
+        color: lighten(yellow, 20);
+        padding-right: .5em;
+      } //icons
+
+      a {
+        @include single-transition(all, .5s, ease-out);
+        display: block;
+        text-decoration: none;
+        padding: 5px 10px;
+        color: $PRUSSIANBLUE;
+
+        &:hover {
+          background: lighten($ORIOLESORANGE, 70);
+          a {
+            color: lighten(yellow, 30);
+          }
+        }
+
+
+      } //a
+    } //li
+  } //ul.nav
+} // navigation

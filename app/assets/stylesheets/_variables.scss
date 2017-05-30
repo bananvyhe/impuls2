@@ -5,6 +5,8 @@
 @import "compass/typography/vertical_rhythm";
 @import "susy";
 @import "compass/layout/grid-background"; 
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
 
 $susy: (
   columns: 10,
@@ -15,9 +17,15 @@ $susy: (
   gutter-position: inside,
 );
 
+$font-main:  'Ubuntu', sans-serif;
+
 $line1: 14px;
-$line2: 18px;
-$line3: 24px;
+$line2: 16px;
+$line3: 22px;
+
+$PRUSSIANBLUE: #0D2C54;
+$ORIOLESORANGE: #F6511D;
+
 
 $small                : 30em;
 $medium               : 47em;
