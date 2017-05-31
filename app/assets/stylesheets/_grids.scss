@@ -47,7 +47,7 @@ img, iframe {
   @include margin-trailer;
 }
 
-h1, h2, h3, h4, h5, h6, h7, h8 {
+h1, h2, h3, h4, h5, h6  {
   font-weight: 700;
   
   @include margin-leader(1);
@@ -70,6 +70,7 @@ h5 {
 }
 h6 {
   @include adjust-font-size-to (0.75rem);
+  
 }
 
 
@@ -88,7 +89,7 @@ p {
 
 #bgimage {
 
-  background-color: #ada;
+   
   background-repeat: no-repeat;
   background-position: center top; 
   background-image: url("sw028.jpg");
@@ -98,17 +99,18 @@ p {
 }
 
 #masterhead {
-
+    
 
   display: flex;
   align-items: center;
+
   position: relative;  
   background-position: center top;
   
   @include span(10 full inside no-gutters);  
-  height: $line1*19;
+  height: $line1*22;
   @include susy-media($medium) {
-  height: $line2*9;
+  height: $line2*12;
   }
    @include susy-media($large) {
   height: $line3*8;
@@ -155,16 +157,36 @@ p {
 }
 
 #contactsviget { 
-  display: flex;
-  @include adjust-font-size-to (0.8em, 2/3);
+
+  h6 {
+
+    @include adjust-font-size-to (0.75rem, 2/3);
+    margin-top: 0.5rem;
+    margin-bottom: -0.7rem;
+  }
+  
+  div { 
+        padding: 0 0.8rem;
+      }
+  @include susy-media(0em $small){
+
+    padding: 0;
+     
+    flex-direction: column;
+  }  
+      
+    
+  
+
  
-    div {
-       padding: 20px;
-    }
-    .contacts {
-      border-left: 2px ;
-      text-align: left; 
-    }
+  @include adjust-font-size-to (0.8em, 2/3);
+  display: flex; 
+  
+
+  .contacts {background-color: #ada;
+    border-left: 2px ;
+    text-align: left; 
+  }
   text-align: right;
     @include span(4 last);
     @include susy-media($small) {
@@ -174,6 +196,8 @@ p {
   @include span(5 last);
   }
 }
+
+
 
 @mixin block($name) {
   //background-color: lighten(dimgray, 10%);

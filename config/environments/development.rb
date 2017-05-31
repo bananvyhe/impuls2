@@ -1,4 +1,5 @@
 Rails.application.configure do
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -58,11 +59,7 @@ Rails.application.configure do
   # Handle multiple requests
   #config.preload_frameworks = true
   #config.allow_concurrency = true
-  config.dev_tweaks.autoload_rules do
-  keep :all
 
-  skip '/favicon.ico'
-  skip :assets
-  keep :forced
-end
+ 
+  
 end
