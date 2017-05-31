@@ -106,7 +106,7 @@ p {
   background-position: center top;
   
   @include span(10 full inside no-gutters);  
-  height: $line1*9;
+  height: $line1*19;
   @include susy-media($medium) {
   height: $line2*9;
   }
@@ -204,6 +204,7 @@ p {
    @include span(10);
   background: lighten($PRUSSIANBLUE, 75);
   ul.nav {
+
     @include susy-media($small) {
       @include horizontal-list;
     }

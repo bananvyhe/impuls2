@@ -56,6 +56,13 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   # Handle multiple requests
-  config.preload_frameworks = true
-  config.allow_concurrency = true
+  #config.preload_frameworks = true
+  #config.allow_concurrency = true
+  config.dev_tweaks.autoload_rules do
+  keep :all
+
+  skip '/favicon.ico'
+  skip :assets
+  keep :forced
+end
 end
