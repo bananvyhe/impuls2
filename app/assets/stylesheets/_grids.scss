@@ -108,7 +108,7 @@ p {
   background-position: center top;
   
   @include span(10 full inside no-gutters);  
-  height: $line1*22;
+  height: $line1*12;
   @include susy-media($medium) {
   height: $line2*12;
   }
